@@ -13,7 +13,7 @@ impl ApplicationHandler for App {
         self.window = Some(event_loop.create_window(Window::default_attributes()).unwrap())
     }
 
-    fn window_event(&mut self, event_loop: &ActiveEventLoop, id: WindowId, event: WindowEvent) {
+    fn window_event(&mut self, event_loop: &ActiveEventLoop, _id: WindowId, event: WindowEvent) {
         match event {
             WindowEvent::CloseRequested => {
                 println!("The close button was pressed; stopping");
@@ -42,5 +42,5 @@ fn main() {
     event_loop.set_control_flow(ControlFlow::Wait);
 
     let mut app = App::default();
-    event_loop.run_app(&mut app);
+    let _unused_result = event_loop.run_app(&mut app);
 }
