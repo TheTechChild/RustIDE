@@ -1,6 +1,6 @@
 use winit::application::ApplicationHandler;
 use winit::event::WindowEvent;
-use winit::event_loop::{self, ActiveEventLoop, ControlFlow, EventLoop};
+use winit::event_loop::{ActiveEventLoop, ControlFlow, EventLoop};
 use winit::window::{Window, WindowId};
 
 #[derive(Default)]
